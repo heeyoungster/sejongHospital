@@ -88,31 +88,34 @@ header .bottom .wrap .main_menu > ul > li > ul > li > a{
 }
 header .bottom .wrap .main_menu > ul > li > ul > li:hover > a{color: #004ea1;}
 
-/* main */
+
+/* main banner */
 main{
-    position: relative;
-    height: 280px;
-    background-size: inherit;
-    background-position: 50% 85%;
-    background-image: url(../img/main-02.jpg);
-    z-index: 0;
+    height: 280px; 
+    animation: 16s chImg infinite ease-in-out;background-size: cover; 
+    background-position: 50% 90%;
 }
-main .slogan{
-    position: absolute;
-    width: 100%; height: 280px;
+@keyframes chImg{
+    0%{background-image: url(../img/main-01.jpg);background-position: 50% 50%;}
+    20%{background-image: url(../img/main-01.jpg);background-position: 50% 50%;}
+    30%{background-image: url(../img/main-02.jpg);background-position: 50% 90%;}
+    70%{background-image: url(../img/main-02.jpg);background-position: 50% 90%;}
+    80%{background-image: url(../img/main-01.jpg);background-position: 50% 50%;}
+    100%{background-image: url(../img/main-01.jpg);background-position: 50% 50%;}
 }
-main .slogan .wrap{
-    width: 1200px; height: 100%;
-    margin: 0 auto;
+
+main .wrap{width: 1200px; height: 100%; margin: 0 auto; display: flex; justify-content: flex-end;}
+
+main .wrap .mainTitle{
+    width: calc(100% * 5 / 12); 
+    padding-right: calc(100% / 12); 
+    padding-top: 140px; 
+    /* background: #aff; */
 }
-main .slogan .wrap h2{
-    float: right;
-    display: block;
-    width:calc(100% / 3); height: 50%;
-    font-size: 48px; font-weight: bold;
-    color: #363636; line-height: 56px;
-    margin:140px 90px 5px 0;
+main .wrap .mainTitle h1{
+    font-size: 48px; color: #fff; text-shadow: 0 0 4px rgba(0,0,0,0.6);
 }
+
 
 /* image nav */
 nav{height: 116px; background: #d3dce5;}
